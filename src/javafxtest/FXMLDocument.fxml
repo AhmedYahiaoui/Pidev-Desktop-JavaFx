@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="rootanchor" focusTraversable="true" prefHeight="462.0" prefWidth="751.0" style="-fx-background-color: #20120F;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxtest.FXMLDocumentController">
+   <children>
+      <AnchorPane layoutX="419.0" layoutY="63.0" prefHeight="336.0" prefWidth="289.0" style="-fx-background-color: #9C2B27;">
+         <children>
+            <TextField fx:id="login" layoutX="34.0" layoutY="79.0" prefHeight="26.0" prefWidth="220.0" promptText="Username" />
+            <PasswordField fx:id="pass" layoutX="34.0" layoutY="142.0" prefHeight="25.0" prefWidth="220.0" promptText="Password" />
+            <Label layoutX="117.0" layoutY="23.0" text="Sign In" textFill="#d0cccc">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Hyperlink layoutX="90.0" layoutY="302.0" text="Forget Password?" />
+            <Button layoutX="39.0" layoutY="232.0" mnemonicParsing="false" onAction="#LoginAction" prefHeight="32.0" prefWidth="220.0" style="-fx-background-color: #E45652;" text="Sign in" textFill="#dad6d6" />
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="462.0" fitWidth="392.0" opacity="0.3" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/10ced114adc23ec7375cd689738ab87b.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="61.0" layoutY="32.0" text="Welcome to Cup Cake" textFill="#e19d9d">
+         <font>
+            <Font name="Berlin Sans FB" size="29.0" />
+         </font>
+      </Label>
+      <Label layoutX="9.0" layoutY="168.0" prefHeight="98.0" prefWidth="338.0" text="Si vous n'etes pas un utilisateur et tu n'avez pas un compte faire l'inscription Ici !" textAlignment="CENTER" textFill="#e8a1a1" wrapText="true">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="739.0" layoutY="-2.0" text="X" textFill="#ebebeb">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Button layoutX="57.0" layoutY="284.0" mnemonicParsing="false" onAction="#hundleRegister" prefHeight="49.0" prefWidth="242.0" style="-fx-background-color: #E45652;" text="Sign up" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorpane" prefHeight="492.0" prefWidth="935.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxtest.AfficheRecetteController">
+   <children>
+      <TableView fx:id="tableRecette" layoutX="18.0" layoutY="71.0" prefHeight="329.0" prefWidth="912.0">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="35.0" text="ID" />
+          <TableColumn fx:id="nom" prefWidth="123.0" text="Nom" />
+            <TableColumn fx:id="duree" prefWidth="47.0" text="Durée" />
+            <TableColumn fx:id="besoin" prefWidth="124.0" text="Besoin" />
+            <TableColumn fx:id="prepation" prefWidth="183.0" text="Préparation" />
+            <TableColumn fx:id="ingedient" prefWidth="233.0" text="Ingédients" />
+            <TableColumn fx:id="image" prefWidth="166.0" text="Image" />
+        </columns>
+      </TableView>
+      <Button layoutX="168.0" layoutY="416.0" mnemonicParsing="false" onAction="#ModifierRecette" text="Modifier cette Recette" />
+      <Button layoutX="462.0" layoutY="416.0" mnemonicParsing="false" onAction="#SupprimerRecette" text="Supprimer cette Recette" />
+   </children>
+</AnchorPane>

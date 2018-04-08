@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxtest.AjoutRecetteController">
+   <children>
+      <Label layoutX="125.0" layoutY="60.0" text="Nom" />
+      <Label layoutX="125.0" layoutY="263.0" text="les ingrédients " />
+      <Label layoutX="125.0" layoutY="158.0" text="Preparation" />
+      <Label layoutX="128.0" layoutY="103.0" text="Durée" />
+      <TextArea fx:id="preparation" layoutX="266.0" layoutY="144.0" prefHeight="45.0" prefWidth="200.0" promptText="Preparation du Recette" />
+      <TextField fx:id="nom" layoutX="266.0" layoutY="56.0" prefHeight="25.0" prefWidth="200.0" promptText="Nom du Recette" />
+      <TextField fx:id="duree" layoutX="266.0" layoutY="99.0" prefHeight="25.0" prefWidth="200.0" promptText="Durée du Recette" />
+      <TextField fx:id="ingredients" layoutX="266.0" layoutY="259.0" prefHeight="25.0" prefWidth="200.0" promptText="Les ingrédients du Recette" />
+      <Button layoutX="128.0" layoutY="306.0" mnemonicParsing="false" onAction="#ajoutPhoto" text="Ajouter une image" />
+      <TextField fx:id="image" layoutX="266.0" layoutY="306.0" prefHeight="25.0" prefWidth="200.0" promptText="image pour cette Recette" />
+      <ImageView fitHeight="100.0" fitWidth="115.0" layoutX="464.0" layoutY="-6.0" pickOnBounds="true" preserveRatio="true" rotate="12.5">
+         <image>
+            <Image url="@images/recette.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="302.0" layoutY="350.0" mnemonicParsing="false" onAction="#AjoutCategorie" text="Ajouter cette Recette" />
+      <Label layoutX="123.0" layoutY="215.0" prefHeight="17.0" prefWidth="43.0" text="Besoin" />
+      <TextField fx:id="Besoin" layoutX="266.0" layoutY="211.0" prefHeight="25.0" prefWidth="200.0" />
+   </children>
+</AnchorPane>

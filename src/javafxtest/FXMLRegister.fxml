@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" focusTraversable="true" prefHeight="462.0" prefWidth="751.0" style="-fx-background-color: #20120F;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxtest.FXMLRegister">
+   <children>
+      <AnchorPane layoutX="429.0" layoutY="43.0" prefHeight="377.0" prefWidth="289.0" style="-fx-background-color: #9C2B27;">
+         <children>
+            <Button layoutX="35.0" layoutY="331.0" mnemonicParsing="false" onAction="#AjoutUser" prefHeight="32.0" prefWidth="220.0" style="-fx-background-color: #E45652;" text="Sign up" textFill="#dad6d6" />
+            <TextField fx:id="username" layoutX="35.0" layoutY="85.0" prefHeight="25.0" prefWidth="220.0" promptText="Inserer Votre Username" />
+            <PasswordField fx:id="password" layoutX="35.0" layoutY="153.0" prefHeight="25.0" prefWidth="220.0" promptText="Inserer votre Password" />
+            <Label layoutX="117.0" layoutY="14.0" text="Sign Up" textFill="#d0cccc">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="99.0" layoutY="244.0" text="Choisir votre role" textFill="#ffe4e4">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="email" layoutX="35.0" layoutY="210.0" prefHeight="25.0" prefWidth="220.0" promptText="Inserer Votre Email" />
+            <RadioButton fx:id="r1" layoutX="47.0" layoutY="283.0" mnemonicParsing="false" selected="true" text="visiterur" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="group" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="r2" layoutX="159.0" layoutY="283.0" mnemonicParsing="false" text="client pro" textFill="WHITE" toggleGroup="$group">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </RadioButton>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="462.0" fitWidth="392.0" opacity="0.3" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/10ced114adc23ec7375cd689738ab87b.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="61.0" layoutY="32.0" text="Welcome to Cup Cake" textFill="#e19d9d">
+         <font>
+            <Font name="Berlin Sans FB" size="29.0" />
+         </font>
+      </Label>
+      <Label layoutX="9.0" layoutY="168.0" prefHeight="98.0" prefWidth="338.0" text="Si vous etes un utilisateur et vous avez un compte tapez votre login et mot de passe ici !" textAlignment="CENTER" textFill="#e8a1a1" wrapText="true">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="61.0" layoutY="283.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="220.0" style="-fx-background-color: #E45652;" text="Back to Sign in" textFill="#dad6d6" />
+      <Label layoutX="739.0" layoutY="-2.0" text="X" textFill="#ebebeb">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
