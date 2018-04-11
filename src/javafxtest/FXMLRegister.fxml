@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" focusTraversable="true" prefHeight="462.0" prefWidth="751.0" style="-fx-background-color: #20120F;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxtest.FXMLRegister">
+<AnchorPane id="AnchorPane" fx:id="rootanchor" focusTraversable="true" prefHeight="462.0" prefWidth="751.0" style="-fx-background-color: #20120F;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxtest.FXMLRegister">
    <children>
       <AnchorPane layoutX="429.0" layoutY="43.0" prefHeight="377.0" prefWidth="289.0" style="-fx-background-color: #9C2B27;">
          <children>
@@ -59,7 +59,7 @@
             <Font size="18.0" />
          </font>
       </Label>
-      <Button layoutX="61.0" layoutY="283.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="220.0" style="-fx-background-color: #E45652;" text="Back to Sign in" textFill="#dad6d6" />
+      <Button layoutX="61.0" layoutY="283.0" mnemonicParsing="false" onAction="#hundlelogin" prefHeight="32.0" prefWidth="220.0" style="-fx-background-color: #E45652;" text="Back to Sign in" textFill="#dad6d6" />
       <Label layoutX="739.0" layoutY="-2.0" text="X" textFill="#ebebeb">
          <font>
             <Font size="13.0" />

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="575.0" prefWidth="965.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxtest.AppelOffreController">
+    <stylesheets>
+        <URL value="@exercice.css" />
+    </stylesheets>
+   <children>
+      <AnchorPane prefHeight="380.0" prefWidth="966.0">
+         <children>
+            <ImageView fitHeight="553.0" fitWidth="824.0" layoutX="141.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../javafxtest.images/fancy-cupcakes-2.jpg" />
+               </image>
+            </ImageView>
+            <DatePicker fx:id="date" layoutX="307.0" layoutY="170.0" prefHeight="25.0" prefWidth="260.0" promptText="                                   Date" />
+            <TextField fx:id="description" layoutX="300.0" layoutY="241.0" prefHeight="145.0" prefWidth="273.0" promptText="Description..." />
+            <TextField fx:id="sujet" layoutX="307.0" layoutY="108.0" prefHeight="25.0" prefWidth="260.0" promptText="                                  Sujet" />
+            <Button fx:id="bt" layoutX="372.0" layoutY="444.0" mnemonicParsing="false" onAction="#ajoutAppeloffre" prefHeight="25.0" prefWidth="122.0" style="-fx-background-color: pink;" text="Ajouter" textFill="#fcfcfc">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Text fill="WHITE" layoutX="316.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ajout Appel D'offre" wrappingWidth="355.0000013113022">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="27.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -33,6 +33,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.image.ImageViewBuilder;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.util.Callback;
 import javafx.util.Duration;
@@ -44,11 +45,9 @@ import javafx.util.Duration;
  */
 public class RecetteController implements Initializable {
 
-    @FXML
     private TableView<Recette> tableimage;
     @FXML
     private AnchorPane anchorpane;
-    @FXML
     private TableColumn<Recette, Image> image;
         
     RecetteService s = new RecetteService();
@@ -56,7 +55,7 @@ public class RecetteController implements Initializable {
     
      ObservableList<Recette> listrecette = FXCollections.observableArrayList(service.getRecette_Admin());
     @FXML
-    private HBox hbox;
+    private VBox vboxRecette;
     @Override
     public void initialize(URL url, ResourceBundle rb) {
     tableimage.setItems(listrecette);
@@ -88,7 +87,6 @@ new Image("file:C:\\xampp\\htdocs\\PiDev\\web\\images\\" + p.getValue().getNom_i
             
     }    
 
-        @FXML
     private void DetailRecette(ActionEvent event) throws IOException {
           
             Recette e = tableimage.getSelectionModel().getSelectedItem();
@@ -106,14 +104,8 @@ final FXMLLoader loader;
         pane = (AnchorPane) tableimage.getParent();
         pane.getChildren().setAll(root);
             
-    
     }
-    
 
-    
-    
-    
-    
     @FXML
     private void hundleCategorie(ActionEvent event) {
                 makeFadeOut();}
@@ -154,6 +146,7 @@ final FXMLLoader loader;
         app_stage.show();
     }
 //
+    /*
     @FXML
     private void hundleHome(javafx.event.ActionEvent event) {
         makeFadeOuthome();
@@ -190,4 +183,82 @@ final FXMLLoader loader;
             loadNextScren();
         }
     }
+*/
+    
+    ///////////////// TO --> Home ///////////////////// 
+    /*
+    @FXML
+    private void hundleHome(javafx.event.ActionEvent event) {
+        makeFadeOutHome();
+    }
+
+    private void makeFadeOutHome() {
+        FadeTransition fadeTransition = new FadeTransition();
+        fadeTransition.setDuration(Duration.millis(1000));
+        fadeTransition.setNode(anchorpane);
+        fadeTransition.setFromValue(1);
+        fadeTransition.setToValue(0);
+        fadeTransition.setOnFinished(new EventHandlerImpl());
+        fadeTransition.play();
+    }
+
+    private void loadNextScrenHome() {
+        try {
+            Parent secondView = FXMLLoader.load(getClass().getResource("FXMLHome.fxml"));
+            //secondView = (StackPane) 
+            Scene newScene = new Scene(secondView);
+            Stage curStage = (Stage) anchorpane.getScene().getWindow();
+            curStage.setScene(newScene);
+        } catch (IOException ex) {
+        }
+    }
+
+    private class EventHandlerImplHome implements EventHandler<javafx.event.ActionEvent> {
+        public EventHandlerImplHome() {
+        }
+        @Override
+        public void handle(javafx.event.ActionEvent event) {
+            loadNextScrenHome();
+        }
+    }
+    */
+    
+    @FXML
+    private void hundlePatteserie(javafx.event.ActionEvent event) {
+        makeFadeOutRecette();
+    }
+
+    private void makeFadeOutRecette() {
+        FadeTransition fadeTransition = new FadeTransition();
+        fadeTransition.setDuration(Duration.millis(1000));
+        fadeTransition.setNode(anchorpane);
+        fadeTransition.setFromValue(1);
+        fadeTransition.setToValue(0);
+        fadeTransition.setOnFinished(new EventHandlerImplRecette());
+        fadeTransition.play();
+    }
+
+    private void loadNextScrenRecette() {
+        try {
+            Parent secondView = FXMLLoader.load(getClass().getResource("FXMLHome.fxml"));
+            //secondView = (StackPane) 
+            Scene newScene = new Scene(secondView);
+            Stage curStage = (Stage) anchorpane.getScene().getWindow();
+            curStage.setScene(newScene);
+        } catch (IOException ex) {
+        }
+    }
+
+    private class EventHandlerImplRecette implements EventHandler<javafx.event.ActionEvent> {
+
+        public EventHandlerImplRecette() {
+        }
+
+        @Override
+        public void handle(javafx.event.ActionEvent event) {
+            loadNextScrenRecette();
+        }
+    }
+    
+    
 }

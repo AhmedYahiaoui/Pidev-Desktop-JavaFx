@@ -1,7 +1,7 @@
 package javafxtest;
 import com.esprit.Entity.User;
 import com.esprit.Service.RecetteService;
-import com.esprit.Service.UserServicee;
+import com.esprit.Service.UserService;
 import com.esprit.utils.DataSource;
 import java.awt.Button;
 import java.awt.Dialog;
@@ -44,12 +44,10 @@ public class FXMLDocumentController implements Initializable {
     
     @FXML
     private void LoginAction(javafx.event.ActionEvent event) throws IOException {
-    
-        
-        
-        UserServicee service =new UserServicee();
-        
-        if (pass.getText().equals("admin") && (login.getText().equals("admin"))) {
+            UserService service =new UserService();
+
+        if (pass.getText().equals("admin") && (login.getText().equals("admin"))) 
+        {
             JOptionPane.showMessageDialog(null, " Bienvenu Admin ");
         
             
@@ -61,8 +59,10 @@ public class FXMLDocumentController implements Initializable {
         app_stage.show();
         
         } else 
-        if (pass.getText().equals("client") && (login.getText().equals("client"))) {
-                    Parent home_page_parent = FXMLLoader.load(getClass().getResource("FXMLHome.fxml"));
+        if (service.Login(login.getText(), pass.getText()))
+      //  if (pass.getText().equals("client") && (login.getText().equals("client"))) 
+        {
+                    Parent home_page_parent = FXMLLoader.load(getClass().getResource("AfterLogin.fxml"));
         Scene home_page_scene = new Scene(home_page_parent);
         Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         app_stage.hide(); //optional

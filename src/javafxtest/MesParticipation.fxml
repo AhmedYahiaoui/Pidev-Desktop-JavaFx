@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="456.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxtest.MesParticipationController">
+   <children>
+      <Text layoutX="14.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mes Participations" wrappingWidth="179.13671875">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <Separator layoutY="52.0" prefHeight="0.0" prefWidth="600.0" />
+      <TableView fx:id="table2" layoutY="62.0" prefHeight="395.0" prefWidth="348.0">
+        <columns>
+          <TableColumn fx:id="sujet" prefWidth="157.0" style="-fx-background-color: pink;" text="Sujet" />
+          <TableColumn fx:id="etat" prefWidth="202.0" style="-fx-background-color: pink;" text="Etat" />
+        </columns>
+      </TableView>
+      <Button fx:id="annuler" layoutX="387.0" layoutY="260.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="179.0" style="-fx-background-color: #ff5656;" text="Annuler" textFill="WHITE" />
+   </children>
+</AnchorPane>

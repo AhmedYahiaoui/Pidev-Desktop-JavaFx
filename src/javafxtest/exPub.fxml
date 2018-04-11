@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.octicons.OctIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="572.0" prefWidth="570.0" style="-fx-border-color: black;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.esprit.gui.ExPubController">
+   <children>
+      <ImageView fitHeight="566.0" fitWidth="799.0" layoutX="1.0" pickOnBounds="true" />
+      <JFXTextArea fx:id="contenuProd" editable="false" labelFloat="true" layoutY="286.0" prefHeight="108.0" prefWidth="799.0">
+         <font>
+            <Font size="18.0" />
+         </font></JFXTextArea>
+      <ImageView fx:id="imageProd" fitHeight="189.0" fitWidth="797.0" layoutX="1.0" layoutY="96.0" pickOnBounds="true" />
+      <JFXTextField editable="false" layoutX="84.0" prefHeight="95.0" prefWidth="716.0" unFocusColor="WHITE" />
+      <ImageView fx:id="ownerImg" fitHeight="82.0" fitWidth="78.0" layoutX="6.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true" />
+      <JFXButton fx:id="share" alignment="CENTER_RIGHT" layoutX="720.0" layoutY="414.0" prefHeight="46.0" prefWidth="63.0">
+         <graphic>
+            <FontAwesomeIconView glyphName="SHARE_ALT" size="30" wrappingWidth="35.66668701171875" />
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="like" layoutX="652.0" layoutY="412.0" />
+      <JFXButton fx:id="delete" layoutX="752.0" layoutY="6.0" prefHeight="28.0" prefWidth="39.0" rotate="180.0">
+         <graphic>
+            <OctIconView glyphName="X" size="20" />
+         </graphic>
+      </JFXButton>
+      <ImageView fx:id="heart" fitHeight="70.0" fitWidth="70.0" layoutX="649.0" layoutY="56.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="/Icons/heart.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="signaler" layoutX="14.0" layoutY="417.0" prefHeight="38.0" prefWidth="110.0" text="    Signaler">
+         <graphic>
+            <OctIconView fill="#ed0707" glyphName="CIRCLE_SLASH" size="30" />
+         </graphic>
+      </JFXButton>
+      <JFXButton layoutX="549.0" layoutY="424.0" text="Commentaire" />
+      <JFXDrawer layoutX="-143.0" prefHeight="446.0" prefWidth="130.0" />
+      <VBox fx:id="vbComments" layoutX="2.0" layoutY="460.0" prefHeight="100.0" prefWidth="797.0" style="-fx-padding: 0 0 0 0;" visible="false" />
+   </children>
+   <padding>
+      <Insets bottom="10.0" />
+   </padding>
+</AnchorPane>

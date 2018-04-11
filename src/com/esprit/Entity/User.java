@@ -12,6 +12,16 @@ public class User {
     String email;
     String password;
     String roles ;
+    static int userconnected;
+
+    public static int getUserconnected() {
+        return userconnected;
+    }
+
+    public static void setUserconnected(int userconnected) {
+        User.userconnected = userconnected;
+    }
+   
 
     public User(int id, String username, String email, String password, String roles) {
         this.id = id;

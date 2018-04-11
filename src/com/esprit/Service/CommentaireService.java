@@ -92,12 +92,11 @@ public class CommentaireService implements ICommentaireService {
         ArrayList<Commentaire> listN = new ArrayList<Commentaire>();
         try {
             stmt = conn.createStatement();
-            ResultSet rs = stmt.executeQuery("Select * from commentaire WHERE commentaire.`recette_id` = '" + r + "'");
+            ResultSet rs = stmt.executeQuery("Select contenu from commentaire WHERE commentaire.`recette_id` = '" + r + "'");
             while (rs.next()) {
                 //System.out.println("id " + rs.getString(1) + "contenu  " + rs.getString(4) );
                 listN.add(new Commentaire(
-                        rs.getInt(1),
-                        rs.getString(2)
+                        rs.getString(1)
                         //rs.getInt(3)
                         ));
             }

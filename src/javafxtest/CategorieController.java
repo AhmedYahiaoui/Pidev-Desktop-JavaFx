@@ -3,7 +3,7 @@ package javafxtest;
 import com.esprit.Entity.Categorie;
 import com.esprit.Service.CategorieService;
 import com.esprit.Service.RecetteService;
-import com.esprit.Service.UserServicee;
+import com.esprit.Service.UserService;
 import java.io.IOException;
 import java.net.URL;
 import java.util.Observable;
@@ -42,7 +42,7 @@ public class CategorieController implements Initializable {
     //@FXML
     //private Button choisie;
 
-///////////////// TO Nos Patteserie ///////////////////// 
+///////////////// TO --> Home ///////////////////// 
     @FXML
     private void hundleHome(javafx.event.ActionEvent event) {
         makeFadeOut();

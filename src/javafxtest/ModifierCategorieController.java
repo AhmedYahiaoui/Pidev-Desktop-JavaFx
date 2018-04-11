@@ -13,6 +13,8 @@ import com.esprit.Service.RecetteService;
 import java.io.File;
 import java.io.IOException;
 import java.net.MalformedURLException;
+import java.nio.file.Files;
+import java.nio.file.StandardCopyOption;
 import java.time.LocalDate;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -79,7 +81,29 @@ public class ModifierCategorieController implements Initializable {
          notificationBuilder.showConfirm();   
     }
 
-    @FXML
+    @FXML    
+    private void ajoutPhoto(ActionEvent event) throws IOException {
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.getExtensionFilters().add(
+                new FileChooser.ExtensionFilter("Image Files","*.png","*.jpg","*.gif"));
+            String path = "C:/xampp/htdocs/PiDev/web/images/";
+        file = fileChooser.showOpenDialog(stage);
+        if (file!=null) {
+            try {
+                String img = file.getName().toString();
+                System.out.println(img);
+                System.out.println("jawek béhi");
+                image.setText(img);
+                Files.copy(file.toPath(),
+                        (new File(path + file.getName())).toPath(),
+                        StandardCopyOption.REPLACE_EXISTING);
+                
+            } catch (MalformedURLException ex) {
+                Logger.getLogger(AjouteCategorieController.class.getName()).log(Level.SEVERE, null, ex);
+            }
+         }    
+    }
+    /*
     private void ajoutPhoto(ActionEvent event) {
                 FileChooser fileChooser = new FileChooser();
         fileChooser.getExtensionFilters().add(
@@ -96,5 +120,5 @@ public class ModifierCategorieController implements Initializable {
                 Logger.getLogger(AjouteCategorieController.class.getName()).log(Level.SEVERE, null, ex);
             }
          } 
-    }
+    }*/
 }

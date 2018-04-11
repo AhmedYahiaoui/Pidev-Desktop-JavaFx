@@ -14,8 +14,11 @@ import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import com.esprit.Entity.User;
-import com.esprit.Service.UserServicee;
+import com.esprit.Service.UserService;
+import javafx.animation.FadeTransition;
+import javafx.event.EventHandler;
 import javafx.scene.control.TextField;
+import javafx.util.Duration;
 import javax.print.DocFlavor;
 import javax.swing.JOptionPane;
 
@@ -35,6 +38,9 @@ public class FXMLRegister implements Initializable {
     @FXML
     private TextField email;
     
+    @FXML
+    private AnchorPane rootanchor;
+    
     String roles;
 
     @FXML
@@ -49,7 +55,7 @@ public class FXMLRegister implements Initializable {
             roles = "client pro";
         }
 
-        UserServicee es = new UserServicee();
+        UserService es = new UserService();
         User e = new User();
 
         e.setUsername(username.getText());
@@ -68,7 +74,38 @@ public class FXMLRegister implements Initializable {
             JOptionPane.showMessageDialog(null, "Votre inscription est terminé avec succée");
         }
     }
-
+    
+    
+        @FXML
+    private void hundlelogin(javafx.event.ActionEvent event) {
+        makeFadeOut();}
+    private void makeFadeOut() {
+        FadeTransition fadeTransition = new FadeTransition();
+        fadeTransition.setDuration(Duration.millis(1000));
+        fadeTransition.setNode(rootanchor);
+        fadeTransition.setFromValue(1);
+        fadeTransition.setToValue(0);
+        fadeTransition.setOnFinished(new EventHandlerImpl());
+        fadeTransition.play();
+    }
+    private void loadNextScren() {
+        try {
+            Parent secondView = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
+            //secondView = (StackPane) 
+            Scene newScene = new Scene(secondView);
+            Stage curStage = (Stage) rootanchor.getScene().getWindow();
+            curStage.setScene(newScene);
+        } catch (IOException ex) {}
+    }
+    private class EventHandlerImpl implements EventHandler<javafx.event.ActionEvent> {
+        public EventHandlerImpl() {
+        }
+        @Override
+        public void handle(javafx.event.ActionEvent event) {
+            loadNextScren();}}
+    
+    
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 

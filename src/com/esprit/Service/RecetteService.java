@@ -42,17 +42,17 @@ public class RecetteService implements IRecetteService {
             stmt = conn.createStatement();
             ResultSet rs = stmt.executeQuery("Select * from Recette");
             while (rs.next()) {
-                System.out.println(rs.getString(1) + " (" + rs.getInt(2) + ")" + " (" + rs.getString(3) + ")"
-                        + " (" + rs.getString(4) + ")" + " (" + rs.getString(5) + ")" + "(" + rs.getString(6) + ")"
-                );
+            //    System.out.println(rs.getString(1) + " (" + rs.getInt(2) + ")" + " (" + rs.getString(3) + ")"
+             //           + " (" + rs.getString(4) + ")" + " (" + rs.getString(5) + ")" + "(" + rs.getString(6) + ")"
+             //   );
                 listRecettes.add(
                         new Recette(
-                                rs.getString(1),
-                                rs.getInt(2),
                                 rs.getString(3),
-                                rs.getString(4),
+                                rs.getInt(4),
                                 rs.getString(5),
-                                rs.getString(6)));
+                                rs.getString(6),
+                                rs.getString(7),
+                                rs.getString(8)));
             }
             stmt.close();
         } catch (SQLException ex) {
@@ -143,9 +143,10 @@ public class RecetteService implements IRecetteService {
         Recette u = new Recette(id);
         try {
             stmt = conn.createStatement();
-            ResultSet rs = stmt.executeQuery("Select `nom`,`duree`,`besoin`,`preparation`,"
+            ResultSet rs = stmt.executeQuery("Select `id_categorie`,`nom`,`duree`,`besoin`,`preparation`,"
                     + "`BN`,`nom_image` from recette where recette.`id`='" + id + "'");
             while (rs.next()) {
+               // u.setId_categorie(rs.getInt(1));
                 u.setNom(rs.getString(1));
                 u.setDuree(rs.getInt(2));
                 u.setBesoin(rs.getString(3));
@@ -218,4 +219,28 @@ public class RecetteService implements IRecetteService {
         }
         return u;
     }
+    
+    
+    
+    
+    
+    
+    
+   
+    
+        
+            public void updateLike(Recette r) {
+        try {
+            String req = "UPDATE `recette` SET `likee` = ?,  WHERE `id` = ?";
+            PreparedStatement st = conn.prepareStatement(req);
+            st.setInt(1, r.getLikee()+1);
+            st.setInt(2, r.getId());
+            st.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(RecetteService.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    
+    
+    
 }

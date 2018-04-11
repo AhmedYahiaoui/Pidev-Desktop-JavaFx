@@ -21,7 +21,16 @@ public class Recette {
     //public User user;
     public int likee;
     public int dislike;
-        private static int idRecette;
+    private static int idRecette;
+    public Categorie id_categorie;
+
+    public Categorie getId_categorie() {
+        return id_categorie;
+    }
+
+    public void setId_categorie(Categorie id_categorie) {
+        this.id_categorie = id_categorie;
+    }
 
 
 

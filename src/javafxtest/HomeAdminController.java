@@ -35,8 +35,6 @@ public class HomeAdminController implements Initializable {
     
 
     @FXML
-    private Label user;
-    @FXML
     private Label commentaire;
     @FXML
     private Button ajoute_categorie;
@@ -50,6 +48,8 @@ public class HomeAdminController implements Initializable {
     private BorderPane borderpane;
     @FXML
     private AnchorPane anchorpane;
+    @FXML
+    private Button stat2;
 
     
     
@@ -58,9 +58,6 @@ public class HomeAdminController implements Initializable {
         // TODO
     }    
 
-    @FXML
-    private void user(MouseEvent event) {
-    }
 
     @FXML
     private void commentaire(MouseEvent event) throws IOException {
@@ -91,7 +88,39 @@ public class HomeAdminController implements Initializable {
         loadUI("affiche recette");
 
     }
+//////////////////////////////////
+    @FXML
+    private void Ajout(ActionEvent event) {
+        loadUI("AppelOffre");
+    }
 
+    @FXML
+    private void Affiche(ActionEvent event) {
+        loadUI("afficheappel");
+    }
+        @FXML
+    private void affichetouts(ActionEvent event) {
+                loadUI("ToutlesAppel");
+    }
+    @FXML
+    private void lesdemandes(ActionEvent event) {
+        loadUI("Lesdemandes");
+    }
+
+    @FXML
+    private void mesparticipations(ActionEvent event) {
+        loadUI("MesParticipation");
+    }
+
+    @FXML
+    private void stat(ActionEvent event) {
+        loadUI("stat");
+    }
+
+    @FXML
+    private void sta2(ActionEvent event) {
+         loadUI("stat2");
+    }
     @FXML
     private void logout(MouseEvent event) throws IOException 
     {

@@ -8,37 +8,117 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-
-<BorderPane fx:id="anchorpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="482.0" prefWidth="734.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxtest.FXMLHomeController">
+<BorderPane fx:id="anchorpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="578.0" prefWidth="874.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxtest.FXMLHomeController">
    <top>
-      <AnchorPane prefHeight="79.0" prefWidth="600.0" style="-fx-background-color: #FFE4E1;" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="39.0" prefWidth="880.0" style="-fx-background-color: #FFE4E1;" BorderPane.alignment="CENTER">
          <children>
-            <Label layoutX="14.0" layoutY="14.0" prefHeight="32.0" prefWidth="205.0" text="Welcome to Cup Cake" textFill="#f8f6f6">
+            <Label layoutX="7.0" prefHeight="32.0" prefWidth="205.0" text="Welcome to Cup Cake" textFill="#f8f6f6">
                <font>
                   <Font name="Berlin Sans FB" size="22.0" />
                </font>
             </Label>
-            <ImageView fitHeight="68.0" fitWidth="111.0" layoutX="656.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true" rotate="20.0">
+            <ImageView fitHeight="38.0" fitWidth="39.0" layoutX="823.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true" rotate="20.0">
                <image>
-                  <Image url="@images/one.png" />
+                  <Image url="@images/shutdown.png" />
                </image>
             </ImageView>
-            <Button layoutX="319.0" layoutY="58.0" mnemonicParsing="false" onAction="#hundleCategorie" prefHeight="37.0" prefWidth="143.0" style="-fx-background-color: transprent;" styleClass="tra" text="Categorie" textFill="#e19d9d">
+            <Button layoutX="321.0" layoutY="40.0" mnemonicParsing="false" onAction="#hundleCategorie" prefHeight="37.0" prefWidth="143.0" style="-fx-background-color: transprent;" styleClass="tra" text="Categorie" textFill="#e19d9d">
                <font>
                   <Font name="Berlin Sans FB Demi Bold" size="19.0" />
                </font>
             </Button>
-            <Button layoutX="480.0" layoutY="58.0" mnemonicParsing="false" onAction="#hundleRecette" prefHeight="37.0" prefWidth="108.0" style="-fx-background-color: transprent;" styleClass="tra" text="Recette" textFill="#e19d9d">
+            <Button layoutX="538.0" layoutY="40.0" mnemonicParsing="false" onAction="#hundleRecette" prefHeight="37.0" prefWidth="108.0" style="-fx-background-color: transprent;" styleClass="tra" text="Recette" textFill="#e19d9d">
                <font>
                   <Font name="Berlin Sans FB Demi Bold" size="19.0" />
                </font>
             </Button>
-            <Button layoutX="646.0" layoutY="-2.0" mnemonicParsing="false" onAction="#hundleRecette" prefHeight="37.0" prefWidth="88.0" style="-fx-background-color: transprent;" styleClass="tra" text="Logout" textFill="#e19d9d">
+            <Button layoutX="794.0" layoutY="32.0" mnemonicParsing="false" onAction="#LoginAction" prefHeight="37.0" prefWidth="88.0" style="-fx-background-color: transprent;" styleClass="tra" text="Logout" textFill="#e19d9d">
                <font>
                   <Font name="Berlin Sans FB Demi Bold" size="19.0" />
+               </font>
+            </Button>
+            <Button layoutX="14.0" layoutY="39.0" mnemonicParsing="false" onAction="#accueil" style="-fx-background-color: transparent;" text="Accueil" textFill="#e19d9d">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
                </font>
             </Button>
          </children>
       </AnchorPane>
    </top>
+   <center>
+      <AnchorPane prefHeight="488.0" prefWidth="874.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="105.0" layoutY="123.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/forum.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="14.0" layoutY="58.0" prefHeight="53.0" prefWidth="277.0" text="Vous etes les Bienvenus sur vos " textFill="#7980b5">
+               <font>
+                  <Font name="Freestyle Script" size="31.0" />
+               </font>
+            </Label>
+            <Label layoutX="295.0" layoutY="137.0" text="Vous pouvez consulter nos Catégorie Ici" textFill="#7980b5">
+               <font>
+                  <Font name="Freestyle Script" size="26.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="589.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true" rotate="108.4">
+               <image>
+                  <Image url="@images/flech2.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="116.0" layoutX="362.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" rotate="36.7">
+               <image>
+                  <Image url="@images/flech1.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="657.0" layoutY="158.0" text="Nos Recettes Ici" textFill="#7980b5">
+               <font>
+                  <Font name="Freestyle Script" size="23.0" />
+               </font>
+            </Label>
+            <Label layoutX="582.0" layoutY="177.0" text="Ou">
+               <font>
+                  <Font name="Freestyle Script" size="21.0" />
+               </font>
+            </Label>
+            <Label layoutX="385.0" layoutY="320.0" text="Vous avez le droit d'ajouter des " textFill="#7980b5">
+               <font>
+                  <Font name="Freestyle Script" size="30.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="456.0" layoutY="198.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/Comment-edit-icon.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="62.0" layoutY="402.0" text="Aussi Faire des" textFill="#7980b5">
+               <font>
+                  <Font name="Freestyle Script" size="30.0" />
+               </font>
+            </Label>
+            <Label layoutX="284.0" layoutY="423.0" text="Ou" textFill="#7980b5">
+               <font>
+                  <Font name="Freestyle Script" size="30.0" />
+               </font>
+            </Label>
+            <Label layoutX="404.0" layoutY="411.0" text="Sur nos Recettes" textFill="#7980b5">
+               <font>
+                  <Font name="Freestyle Script" size="30.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="68.0" fitWidth="83.0" layoutX="197.0" layoutY="389.0" pickOnBounds="true" preserveRatio="true" rotate="18.4">
+               <image>
+                  <Image url="@images/like.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="68.0" fitWidth="83.0" layoutX="321.0" layoutY="398.0" pickOnBounds="true" preserveRatio="true" rotate="161.6">
+               <image>
+                  <Image url="@images/like.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </center>
 </BorderPane>

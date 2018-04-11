@@ -26,6 +26,7 @@ public class FXMLHomeController implements Initializable {
     @FXML
     private BorderPane anchorpane;
     
+    //////////////////CATEGORIE////////////////////
     @FXML
     private void hundleCategorie(javafx.event.ActionEvent event) {
         makeFadeOut();}
@@ -53,10 +54,8 @@ public class FXMLHomeController implements Initializable {
         @Override
         public void handle(javafx.event.ActionEvent event) {
             loadNextScren();
-        }} 
-    //////////////////////////////////////
-    
-    
+        }}     
+    /////////////////VERS RECETTE/////////////////////
     @FXML
     private void hundleRecette(javafx.event.ActionEvent event) {
         makeFadeOutRecette();}
@@ -71,7 +70,7 @@ public class FXMLHomeController implements Initializable {
     }
     private void loadNextScrenRecette() {
         try {
-            Parent secondView = FXMLLoader.load(getClass().getResource("recette.fxml"));
+            Parent secondView = FXMLLoader.load(getClass().getResource("RecetteFront.fxml"));
             //secondView = (StackPane) 
             Scene newScene = new Scene(secondView);
             Stage curStage = (Stage) anchorpane.getScene().getWindow();
@@ -85,7 +84,8 @@ public class FXMLHomeController implements Initializable {
         public void handle(javafx.event.ActionEvent event) {
             loadNextScrenRecette();
         }}
-    
+            
+    @FXML
     private void LoginAction(javafx.event.ActionEvent event) throws IOException {
         
         Parent home_page_parent = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
@@ -96,6 +96,15 @@ public class FXMLHomeController implements Initializable {
         app_stage.show();
     }
     
+        @FXML
+    private void accueil(ActionEvent event) throws IOException {
+                Parent home_page_parent = FXMLLoader.load(getClass().getResource("AfterLogin.fxml"));
+        Scene home_page_scene = new Scene(home_page_parent);
+        Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        app_stage.hide();
+        app_stage.setScene(home_page_scene);
+        app_stage.show();
+    }
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         }

@@ -20,12 +20,19 @@ public class Likerecette {
         this.valeur = valeur;
     }
 
+    public Likerecette(int id, Recette recette_id, User user_id) {
+        this.id = id;
+        this.recette_id = recette_id;
+        this.user_id = user_id;
+    }
+
         public Likerecette(int valeur) {
         this.valeur = valeur;
     }
 
     public Likerecette() {
     }
+
     
     public int getId() {
         return id;

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="520.0" prefWidth="769.0" style="-fx-border-image-width: 0 0 0 20; -fx-border-color: RED;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxtest.UneRecetteController">
+   <children>
+      <Label layoutX="27.0" layoutY="53.0" prefHeight="30.0" prefWidth="183.0" text="Nom Recette" textFill="#f28a8a">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="270.0" fitWidth="304.0" layoutX="6.0" layoutY="83.0" pickOnBounds="true" preserveRatio="true" />
+      <Label layoutX="315.0" layoutY="345.0" prefHeight="30.0" prefWidth="63.0" text="Durée" textFill="#f28a8a">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="354.0" layoutY="250.0" prefHeight="30.0" prefWidth="105.0" text="Ingrédiants" textFill="#f28a8a">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="354.0" layoutY="168.0" prefHeight="30.0" prefWidth="63.0" text="Besoin" textFill="#f28a8a">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="354.0" layoutY="68.0" prefHeight="30.0" prefWidth="105.0" text="Preparation" textFill="#f28a8a">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="32.0" fitWidth="45.0" layoutX="424.0" layoutY="344.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/Microsoft.VisualStudio.Services.Icons.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="27.0" fitWidth="32.0" layoutX="325.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/presetation.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="27.0" fitWidth="32.0" layoutX="325.0" layoutY="170.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/ingredients.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="27.0" fitWidth="32.0" layoutX="325.0" layoutY="252.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/besoin.png" />
+         </image>
+      </ImageView>
+      <TextField editable="false" layoutX="357.0" layoutY="200.0" prefHeight="44.0" prefWidth="380.0" />
+      <TextArea editable="false" layoutX="359.0" layoutY="98.0" prefHeight="74.0" prefWidth="380.0" />
+      <TextField editable="false" layoutX="354.0" layoutY="287.0" prefHeight="44.0" prefWidth="380.0" />
+      <TextField editable="false" layoutX="378.0" layoutY="348.0" prefHeight="25.0" prefWidth="32.0" />
+      <Label layoutX="529.0" layoutY="384.0" text="Jaime" />
+      <Label layoutX="688.0" layoutY="384.0" text="jaimepas" />
+      <ImageView fitHeight="45.0" fitWidth="53.0" layoutX="518.0" layoutY="338.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/heartlike.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="45.0" fitWidth="49.0" layoutX="689.0" layoutY="338.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/dislike.png" />
+         </image>
+      </ImageView>
+      <Separator layoutX="318.0" layoutY="109.0" orientation="VERTICAL" prefHeight="200.0" />
+      <Button layoutX="518.0" layoutY="401.0" mnemonicParsing="false" text="J'aime" />
+      <Button layoutX="676.0" layoutY="401.0" mnemonicParsing="false" text="J'aime pas" />
+   </children>
+</AnchorPane>

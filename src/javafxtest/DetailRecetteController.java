@@ -13,6 +13,8 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.animation.FadeTransition;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.scene.Scene;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -21,9 +23,14 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.ListView;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.util.Duration;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -52,9 +59,20 @@ public class DetailRecetteController implements Initializable {
     private AnchorPane anchorpane;
     @FXML
     private TextField contenu;
+    @FXML
+    private Button j;
+    @FXML
+    private Button jp;
+    
+    @FXML
+    private TableView<Commentaire> tableCommentaire;
+    @FXML
+    private TableColumn<Commentaire,String> contenue;
     Recette u;
     User user;
-
+    @FXML
+    private Label categorie;
+    
     public DetailRecetteController(Recette u) {
         this.u = u;
     }
@@ -73,8 +91,11 @@ public class DetailRecetteController implements Initializable {
         jaime.setText(Integer.toString(u.getLikee()));
         jaimepas.setText(Integer.toString(u.getDislike()));
         // String path = "C:/xampp/htdocs/PiDev/web/images/";
-        Image img = new Image("http://localhost/PiDev/web/images/" + u.nom_image);
+        Image img = new Image("http://localhost/PiDev/web/images/" + u.nom_image,700,700, false, false);
         imagev.setImage(img);
+//        categorie.setText(u.getId_categorie().getNom().toString());
+        //////
+        tableCommentaire.setVisible(false);
 
     }
 
@@ -103,6 +124,8 @@ public class DetailRecetteController implements Initializable {
         } catch (IOException ex) {
         }
     }
+
+
 
     private class EventHandlerImplRecette implements EventHandler<javafx.event.ActionEvent> {
 
@@ -134,14 +157,12 @@ public class DetailRecetteController implements Initializable {
         RecetteService rs = new RecetteService();
         //Recette r = new Recette();
         int likee=like.getValeur();
-        rs.update(new Recette(
-                u.id, 
-                nom.getText(), 
-                Integer.parseInt(duree.getText()),
-                 besoin.getText(), preparation.getText(), ingredient.getText()
-               // Integer.parseInt(likee.getValue())
-        ));
         
+        
+        j.setVisible(false);
+        jp.setVisible(true);
+       // rs.updateLike(new Recette(likee));
+        /*
         if (like.getValeur() == 0) 
         {
             like.setValeur(1);
@@ -149,14 +170,15 @@ public class DetailRecetteController implements Initializable {
             //like.setUser_id(user);
             es.ajouteLike(like);
         }
-
+*/
     }
 
     @FXML
     private void jaimepas(ActionEvent event) {
-        /*          RecetteService es = new RecetteService();
-                Recette e =new Recette(Integer.parseInt(jaimepas.getText()));
-        es.createRecette(e);*/
+        
+                
+        jp.setVisible(false);        
+        j.setVisible(true);
     }
 
     Commentaire r = new Commentaire();
@@ -169,8 +191,21 @@ public class DetailRecetteController implements Initializable {
         es.createCommentair(r);
         contenu.clear();
     }
-
+    
     @FXML
-    private void autreCommentaire(ActionEvent event) {
+    private void autreCommentaire(ActionEvent event) throws IOException {
+                tableCommentaire.setVisible(true);
+
+        CommentaireService service = new CommentaireService();
+     ObservableList<Commentaire> listCommentaire =
+             FXCollections.observableArrayList(service.AfficherCommentaire(u.getId()));
+
+   contenue.setCellValueFactory(new PropertyValueFactory("contenu"));
+       tableCommentaire.setItems(listCommentaire);
+    }
+    
+        @FXML
+    private void retour(ActionEvent event) {
+       tableCommentaire.setVisible(false);    
     }
 }

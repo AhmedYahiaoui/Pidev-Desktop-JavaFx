@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane fx:id="borderpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="499.0" prefWidth="972.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.esprit.controller.HomeController">
+   <left>
+      <AnchorPane prefHeight="499.0" prefWidth="284.0" style="-fx-background-color: #ffb8b8;" BorderPane.alignment="CENTER">
+         <children>
+            <Button layoutX="58.0" layoutY="80.0" mnemonicParsing="false" onAction="#Ajout" prefHeight="37.0" prefWidth="191.0" style="-fx-background-color: #f1a2a2;" text="Ajouter ">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <Button layoutX="16.0" layoutY="216.0" mnemonicParsing="false" onAction="#Affiche" prefHeight="34.0" prefWidth="127.0" style="-fx-background-color: ansparent;" text="Mes Appels d'offre" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <Button layoutX="157.0" layoutY="216.0" mnemonicParsing="false" onAction="#affichetouts" prefHeight="34.0" prefWidth="149.0" style="-fx-background-color: transparent;" text="Tous les Appels d'offre" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <Button layoutX="154.0" layoutY="313.0" mnemonicParsing="false" onAction="#lesdemandes" prefHeight="37.0" prefWidth="130.0" style="-fx-background-color: transparent;" text="Demandes" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <Button layoutX="14.0" layoutY="314.0" mnemonicParsing="false" onAction="#mesparticipations" prefHeight="35.0" prefWidth="129.0" style="-fx-background-color: tansparent;" text="Participations" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <Button layoutX="54.0" layoutY="403.0" mnemonicParsing="false" onAction="#stat" prefHeight="34.0" prefWidth="198.0" style="-fx-background-color: transparent;" text="Statistiques Sur Les Appel">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <Text layoutX="85.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Appel d'offre" wrappingWidth="183.134765625">
+               <font>
+                  <Font name="Freestyle Script" size="46.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="41.0" fitWidth="39.0" layoutX="130.0" layoutY="350.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../javafxtest.images/Conversion-optimization-512.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="43.0" fitWidth="59.0" layoutX="128.0" layoutY="271.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../javafxtest.images/icon-mobilier.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="37.0" fitWidth="42.0" layoutX="132.0" layoutY="169.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../javafxtest.images/iconsolution_big_08_gestionprojet_1.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="stat2" layoutX="56.0" layoutY="437.0" mnemonicParsing="false" onAction="#sta2" prefHeight="25.0" prefWidth="189.0" style="-fx-background-color: transparent;" text="Statistiques">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <ImageView fitHeight="499.0" fitWidth="670.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+         <image>
+            <Image url="@../../../javafxtest.images/framboise-cupcakes-a-la-vanille.jpeg" />
+         </image>
+      </ImageView>
+   </center>
+</BorderPane>
